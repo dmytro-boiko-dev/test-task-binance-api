@@ -3,12 +3,13 @@
 ### Setup & run project
 
 Install dependencies:
+
 ```text
 npm install
 ```
 
-
 Run project:
+
 ```text
 npm run dev
 ```
@@ -16,12 +17,14 @@ npm run dev
 ## API description
 
 1. Get prices data for a pair for a specified period:  
-Request:
+   Request:
+
 ```
 POST /api/prices
 ```
 
 Request body:
+
 ```text
 {
     "pair": "BTCUSDT",
@@ -30,12 +33,13 @@ Request body:
 ```
 
 Full URL (for localhost):
+
 ```text
 http://localhost:3000/api/prices
 ```
 
-
 Response example:
+
 ```text
 {
     "pair": "BTCUSDT",
@@ -46,10 +50,24 @@ Response example:
 }
 ```
 
+## Tests
+
+1. run app:
+
+```text
+npm run dev
+```
+
+2. run tests:
+
+```text
+npm run test
+```
 
 ### Docs
 
 Binance API docs:
+
 ```text
 https://developers.binance.com/docs/binance-spot-api-docs/rest-api/market-data-endpoints#rolling-window-price-change-statistics
 ```
