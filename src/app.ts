@@ -3,7 +3,7 @@ import cors from 'cors';
 // import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import priceRoutes from './routes/priceRoute';
-import {fetchAndStorePrice} from './controllers/priceController';
+// import {fetchAndStorePrice} from './controllers/priceController';
 
 dotenv.config();
 
@@ -14,8 +14,8 @@ app.use(express.json());
 
 app.use('/api/prices', priceRoutes);
 
-setInterval(fetchAndStorePrice, 60000);
-fetchAndStorePrice(); // Initial fetch
+// setInterval(fetchAndStorePrice, 60000);
+// fetchAndStorePrice(); // Initial fetch
 
 // db connection
 // const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/priceTracker';
