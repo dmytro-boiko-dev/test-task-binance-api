@@ -1,4 +1,5 @@
 export interface IBinancePrice {
     symbol: string;
-    price: string;
+    // price: string;
+    priceChange: string;
 }
