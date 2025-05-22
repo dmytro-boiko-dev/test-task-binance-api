@@ -16,14 +16,11 @@ export const getPrices = async (req: Request, res: Response): Promise<void> => {
     try {
 
         // 1. Fetch prices
-        // const pair = "BTCUSDT";
         const pair = req.body.pair;
-        // const timePeriod = "7d";
         const timePeriod = req.body.period;
 
         const combinedUrl = BINANCE_API_URL + `?symbol=${pair}&windowSize=${timePeriod}`
 
-        // const response = await axios.get(BINANCE_API_URL);
         const response = await axios.get<IBinancePrice>(combinedUrl);
 
         // @ts-ignore
@@ -31,7 +28,6 @@ export const getPrices = async (req: Request, res: Response): Promise<void> => {
 
         console.log(`Fetched price for ${symbol}`);
         console.log(`Time period ${timePeriod}`);
-
 
         // 2. analyze price
         if (Number(priceChange) > 0) {
